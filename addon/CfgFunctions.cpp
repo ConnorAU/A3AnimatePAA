@@ -11,12 +11,12 @@
 class CAU {
     tag=QUOTE(FUNC_PREFIX);
     class ANIMATE {
-        file="\AnimatePAA_ConnorAU\functions";
+        file="AnimatePAA_ConnorAU\functions";
         class add {};
         class addGlobal {};
         class eachFrameClient {};
         class eachFrameServer {};
-        class init {preinit=1};
+        class init {preinit=1;};
         class remove {};
         class removeGlobal {};
     };
