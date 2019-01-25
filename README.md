@@ -47,6 +47,10 @@ Syntax:
 
 Note: This function must be executed on the server. Executing on the client will redirect the request to the server automatically.
 
+# License
+This work is licensed under CUP-License (CUP-L), Version 1.0  
+http://cup-arma3.org/license  
+https://github.com/ConnorAU/A3AnimatePAA/blob/master/LICENSE
 
 # Contact Me
 If you have any questions about this mod, you can contact me on discord: https://discord.gg/DMkxetD
