@@ -12,7 +12,7 @@
 
 private _remove = [];
 {
-	_x params ["_type","_target","_path","_iteration","_maxIteration","_tick","_delay"];
+	_x params ["_type","_target","_path","_iteration","_maxIteration","_tick","_delay","_mode","_increment"];
 	if (diag_tickTime >= _tick) then {
 		switch _type do {
 			case "object":{
@@ -35,8 +35,34 @@ private _remove = [];
 			};
 		};
 
-		_iteration = _iteration + 1;
-		if (_iteration >= _maxIteration) then {_iteration = 0};
+		_iteration = _iteration + _increment;
+		switch _mode do {
+			// normal loop, return to frame 0
+			case 0:{
+				if (_iteration >= _maxIteration) then {_iteration = 0};
+			};
+			// smoothly play from start to end to start
+			case 1:{
+				switch true do {
+					case (_iteration >= _maxIteration):{
+						_iteration = _maxIteration - 2;
+						_increment = -1;
+					};
+					case (_iteration < 0):{
+						_iteration = 1;
+						_increment = 1;
+					};
+				};			
+				_x set [8,_increment];
+			};
+			// remove task on final frame
+			case 2:{
+				if (_iteration >= _maxIteration) then {
+					_remove pushBack _target;
+				};
+			};
+		};
+
 		_x set [3,_iteration];
 		_x set [5,diag_tickTime + _delay];
 	};

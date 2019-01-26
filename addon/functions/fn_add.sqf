@@ -36,5 +36,6 @@ VAR_ANIMATE_LIST_LOCAL pushBack [
 		getText(_config >> "type")
 	},
 	0,getNumber(_config >> "frames"),
-	0,getNumber(_config >> "delay")
+	0,getNumber(_config >> "delay"),
+	getNumber(_config >> "mode"),1
 ];

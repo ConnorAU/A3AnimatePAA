@@ -38,6 +38,12 @@ class CfgAnimatePAA {
 
         // Delay in seconds between applying a new frame
         delay=0.1;
+        
+        // Loop mode
+        //    0: start at 0, reach max frame, return to 0, repeat
+        //    1: start at 0, reach max frame, reverse frame by frame back to 0, repeat
+        //    2: start at 0, reach max frame, end loop (texture stays as final frame)
+        mode=0;
     };
 
     */
@@ -45,11 +51,13 @@ class CfgAnimatePAA {
         layers[]={"\AnimatePAADemo_ConnorAU\images\vehicle_%1.paa"};
         frames=16; // starts at 0, will end on 15
         delay=0.07; // Time between changing frames
+        mode=0; // Loop mode
     };
     class markerExample {
         type="AnimatePAA_example%1";
         frames=8;
         delay=0.1;
+        mode=0;
     };
 };
 
