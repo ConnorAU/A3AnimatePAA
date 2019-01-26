@@ -15,6 +15,9 @@ onLoadName = "AnimatePAA Demo";
 onLoadMission = "AnimatePAA Demo";
 loadScreen = "\a3\map_vr\data\picturemap_ca.paa";
 
+briefing=0;
+debriefing=0;
+
 // CfgAnimatePAA works the same in the mission's description.ext as it does in a mod's config.cpp
 
 class CfgRemoteExec {
