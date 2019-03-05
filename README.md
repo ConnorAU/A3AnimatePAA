@@ -9,6 +9,4 @@ Transform your vehicle skins and marker icons from static images to GIF-like ani
 - [Discord](https://discord.gg/DMkxetD)
 
 # License
-This work is licensed under CUP-License (CUP-L), Version 1.0  
-http://cup-arma3.org/license  
 https://github.com/ConnorAU/A3AnimatePAA/blob/master/LICENSE
