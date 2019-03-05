@@ -8,10 +8,10 @@
 
 #include "functions\defines.inc"
 
-class CAU {
+class CAU_AnimatePAA {
     tag=QUOTE(FUNC_PREFIX);
-    class ANIMATE {
-        file="AnimatePAA_ConnorAU\functions";
+    class functions {
+        file="cau\animatepaa\functions";
         class add {};
         class addGlobal {};
         class eachFrameClient {};

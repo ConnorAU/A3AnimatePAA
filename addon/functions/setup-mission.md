@@ -5,18 +5,18 @@ You can download the scripts from the [Github Releases](https://github.com/Conno
 
 ## Installing the mod into your mission file
 1. Download `AnimatePAAScripts.zip` from the releases page linked above
-2. Extract the folder `AnimatePAA_ConnorAU` from the .zip into your mission file root folder
+2. Extract the folder `cau` from the .zip into your mission file root folder
 3. Open your `description.ext` and include the `CfgFunctions.cpp` file as shown below
 ```cpp
 class CfgFunctions {
-    #include "AnimatePAA_ConnorAU\CfgFunctions.paa"
+    #include "cau\animatepaa\CfgFunctions.cpp"
 };
 ```
 4. Still inside the `description.ext`, include the `CfgRemoteExec.cpp` file as shown below
 ```cpp
 class CfgRemoteExec {
     class Functions {
-        #include "AnimatePAA_ConnorAU\CfgRemoteExec.cpp"
+        #include "cau\animatepaa\CfgRemoteExec.cpp"
     };
 };
 ```

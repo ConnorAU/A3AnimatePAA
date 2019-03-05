@@ -7,7 +7,7 @@
 └──────────────────────────────────────────────────────*/
 
 class CfgPatches {
-	class AnimatePAADemo {
+	class CAU_AnimatePAADemo {
         name="AnimatePAADemo";
         author="Connor";
         url="https://steamcommunity.com/id/_connor";
@@ -48,7 +48,7 @@ class CfgAnimatePAA {
 
     */
     class objectExample {
-        layers[]={"\AnimatePAADemo_ConnorAU\images\vehicle_%1.paa"};
+        layers[]={"\cau\animatepaa\demo\images\vehicle_%1.paa"};
         frames=16; // starts at 0, will end on 15
         delay=0.07; // Time between changing frames
         mode=0; // Loop mode
@@ -64,7 +64,7 @@ class CfgAnimatePAA {
 class CfgMarkers {
 	class AnimatePAA_example0 {
 		name="AnimatePAA by ConnorAU";
-		icon="\AnimatePAADemo_ConnorAU\images\marker_0.paa";
+		icon="\cau\animatepaa\demo\images\marker_0.paa";
 		color[]={1,1,1,1};
 		size=36;
 		scope=0;
@@ -73,24 +73,24 @@ class CfgMarkers {
 		showEditorMarkerColor=0;
 	};
     class AnimatePAA_example1: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_1.paa";
+		icon="\cau\animatepaa\demo\images\marker_1.paa";
     };
     class AnimatePAA_example2: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_2.paa";
+		icon="\cau\animatepaa\demo\images\marker_2.paa";
     };
     class AnimatePAA_example3: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_3.paa";
+		icon="\cau\animatepaa\demo\images\marker_3.paa";
     };
     class AnimatePAA_example4: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_4.paa";
+		icon="\cau\animatepaa\demo\images\marker_4.paa";
     };
     class AnimatePAA_example5: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_5.paa";
+		icon="\cau\animatepaa\demo\images\marker_5.paa";
     };
     class AnimatePAA_example6: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_6.paa";
+		icon="\cau\animatepaa\demo\images\marker_6.paa";
     };
     class AnimatePAA_example7: AnimatePAA_example0 {
-		icon="\AnimatePAADemo_ConnorAU\images\marker_7.paa";
+		icon="\cau\animatepaa\demo\images\marker_7.paa";
     };
 };

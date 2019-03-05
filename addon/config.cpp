@@ -7,7 +7,7 @@
 └──────────────────────────────────────────────────────*/
 
 class CfgPatches {
-	class AnimatePAA {
+	class CAU_AnimatePAA {
         name="AnimatePAA";
         author="Connor";
         url="https://steamcommunity.com/id/_connor";
@@ -20,5 +20,5 @@ class CfgPatches {
 };
 
 class CfgFunctions {
-    #include "\AnimatePAA_ConnorAU\CfgFunctions.cpp"
+    #include "CfgFunctions.cpp"
 };
