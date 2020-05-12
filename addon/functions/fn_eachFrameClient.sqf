@@ -33,6 +33,13 @@ private _remove = [];
 					_remove pushBack _target;
 				};
 			};
+			case "control":{
+				if (isNull _target) then {
+					_remove pushBack _target;
+				} else {
+					_target ctrlSetText format[_path,_iteration];
+				};
+			};
 		};
 
 		_iteration = _iteration + _increment;

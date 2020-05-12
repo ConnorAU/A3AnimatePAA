@@ -12,9 +12,9 @@
 
 if isDedicated exitWith {};
 
-params [["_target","",[objNull,""]]];
+params [["_target","",[objNull,"",controlNull]]];
 
-// deleted objects will be null so dont exit for that
+// deleted objects and controls will be null so dont exit for that
 if (_target in [""]) exitWith {};
 
 private _index = VAR_ANIMATE_LIST_LOCAL findIf {_x#1 isEqualTo _target};
