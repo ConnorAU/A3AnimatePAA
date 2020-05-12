@@ -62,10 +62,10 @@ class CfgAnimatePAA {
 			delay=0.1;
 			mode=0;
 	};
-	class ctrlExampple {
-			image="\cau\animatepaa\demo\images\vehicle_%1.paa";
-			frames=16;
-			delay=0.07;
+	class ctrlExample {
+			image="\cau\animatepaa\demo\images\marker_%1.paa";
+			frames=8;
+			delay=0.1;
 			mode=0;
 	};
 };
