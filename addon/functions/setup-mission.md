@@ -27,10 +27,10 @@ If you do not have a `CfgFunctions` or `CfgRemoteExec` set up already, take a lo
 You can add your animation configurations in the mission file directly, simply open your `description.ext` and add the following:
 ```cpp
 class CfgAnimatePAA {
-    // Example: https://github.com/ConnorAU/A3AnimatePAA/blob/master/demo/config.cpp#L26-L41
+    // Example: https://github.com/ConnorAU/A3AnimatePAA/blob/master/demo/config.cpp#L26-L44
 };
 ```
-Using this [example](https://github.com/ConnorAU/A3AnimatePAA/blob/master/demo/config.cpp#L26-L41) as a guide, you can create your own animation configurations inside the newly created `CfgAnimatePAA` class.
+Using this [example](https://github.com/ConnorAU/A3AnimatePAA/blob/master/demo/config.cpp#L26-L44) as a guide, you can create your own animation configurations inside the newly created `CfgAnimatePAA` class.
 
 # Contact Me
 If you have any questions about this mod, you can contact me on discord: https://discord.gg/DMkxetD

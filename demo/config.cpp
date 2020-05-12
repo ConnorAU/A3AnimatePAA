@@ -26,47 +26,41 @@ class CfgAnimatePAA {
 	class example {
 			// If this class is for an object, define the image layer(s)
 			// Empty string elements will skip that layer when applying textures to the object
-			layers[]={"myImageLayer0_%1.paa","","myImageLayer2_%1.paa"};
+			path[]={"myImageLayer0_%1.paa","","myImageLayer2_%1.paa"};
+			path="myMarkerClass_%1";
 
-			// If this class if for a marker, define the marjer type
-			type="myMarkerClass_%1.paa";
+			// Minimum and maximum frame of the animation. This allows selecting a specific range of sub-frames from larger animation set if desired.
+			// EG: myImagePath_0.paa, myImagePath_1.paa, myImagePath_2.paa... myImagePath_15.paa
+			frames[]={0,15};
 
-			// If this class is for a control, define the image path
-			image="myImagePath_%1.paa";
-
-			// Number of frames to the animation.
-			// 16 frames would mena you have an image for every interval from 0 to 15
-			// EG: myMarkerClass_0.paa, myMarkerClass_1.paa, myMarkerClass_2.paa... myMarkerClass_15.paa
-			frames=16;
-
-			// Delay in seconds between applying a new frame
-			delay=0.1;
+			// Seconds between applying a new frame
+			interval=0.1;
 			
 			// Loop mode
-			//    0: start at 0, reach max frame, return to 0, repeat
-			//    1: start at 0, reach max frame, reverse frame by frame back to 0, repeat
-			//    2: start at 0, reach max frame, end loop (texture stays as final frame)
+			//    0: start at min frame, reach max frame, return to min frame, repeat
+			//    1: start at min frame, reach max frame, reverse frame by frame back to min frame, repeat
+			//    2: start at min frame, reach max frame, end loop (texture stays as final frame)
 			mode=0;
 	};
 
 	*/
 	class objectExample {
-			layers[]={"\cau\animatepaa\demo\images\vehicle_%1.paa"};
-			frames=16; // starts at 0, will end on 15
-			delay=0.07; // Time between changing frames
+			path[]={"\cau\animatepaa\demo\images\vehicle_%1.paa"};
+			frames[]={0,15}; // starts at 0, will end on 15
+			interval=0.07; // Time between changing frames
 			mode=0; // Loop mode
 	};
 	class markerExample {
-			type="AnimatePAA_example%1";
-			frames=8;
-			delay=0.1;
+			path="AnimatePAA_example%1";
+			frames[]={0,7};
+			interval=0.1;
 			mode=0;
 	};
 	class ctrlExample {
-			image="\cau\animatepaa\demo\images\marker_%1.paa";
-			frames=8;
-			delay=0.1;
-			mode=0;
+			path="\a3\boat_f_destroyer\destroyer_01\data\destroyer_01_n_0%1_co.paa";
+			frames[]={3,7};
+			interval=0.5;
+			mode=1;
 	};
 };
 

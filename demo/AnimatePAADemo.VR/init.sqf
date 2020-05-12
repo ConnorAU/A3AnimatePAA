@@ -18,7 +18,14 @@
 		CAU_animate_demo_ctrl ctrlSetFade 1;
 		CAU_animate_demo_ctrl ctrlCommit 0;
 	};
-	[uiNamespace getVariable "CAU_animate_demo_ctrl","ctrlExample"] call CAU_animate_fnc_add;
+	//[uiNamespace getVariable "CAU_animate_demo_ctrl","ctrlExample"] call CAU_animate_fnc_add;
+	[ 
+		uiNamespace getVariable ["CAU_animate_demo_ctrl",controlNull], 
+		[ 
+			"\a3\boat_f_destroyer\destroyer_01\data\destroyer_01_n_0%1_co.paa",
+			[3,7],0.5,1 
+		] 
+	] call CAU_animate_fnc_add;
 };
 
 "CAU_ANIMATE" cutText ["This demo showcases the functionality of the AnimatePAA mod.<br/>Observe the SUV infront of you, the control on screen and the marker on the map.","BLACK FADED",0,true,true];

@@ -12,10 +12,10 @@
 
 private _remove = [];
 {
-	_x params ["_type","_target","_path","_iteration","_maxIteration","_tick","_delay","_mode","_increment"];
+	_x params ["_typeIndex","_target","_path","_iteration","_minIteration","_maxIteration","_tick","_interval","_mode","_increment"];
 	if (diag_tickTime >= _tick) then {
-		switch _type do {
-			case "object":{
+		switch _typeIndex do {
+			case 0:{ // Object
 				if (isNull _target) then {
 					_remove pushBack _target;
 				} else {
@@ -26,52 +26,52 @@ private _remove = [];
 					} foreach _path;
 				};
 			};
-			case "marker":{
-				if (_target in allMapMarkers) then {
-					_target setMarkerTypeLocal format[_path,_iteration];
-				} else {
-					_remove pushBack _target;
-				};
-			};
-			case "control":{
+			case 1:{ // Control
 				if (isNull _target) then {
 					_remove pushBack _target;
 				} else {
 					_target ctrlSetText format[_path,_iteration];
 				};
 			};
+			case 2:{ // Marker
+				if (_target in allMapMarkers) then {
+					_target setMarkerTypeLocal format[_path,_iteration];
+				} else {
+					_remove pushBack _target;
+				};
+			};
 		};
 
 		_iteration = _iteration + _increment;
 		switch _mode do {
-			// normal loop, return to frame 0
+			// normal loop, return to frame _minIteration
 			case 0:{
-				if (_iteration >= _maxIteration) then {_iteration = 0};
+				if (_iteration > _maxIteration) then {_iteration = _minIteration};
 			};
 			// smoothly play from start to end to start
 			case 1:{
 				switch true do {
-					case (_iteration >= _maxIteration):{
-						_iteration = _maxIteration - 2;
+					case (_iteration > _maxIteration):{
+						_iteration = _maxIteration - 1;
 						_increment = -1;
 					};
-					case (_iteration < 0):{
-						_iteration = 1;
+					case (_iteration < _minIteration):{
+						_iteration = _minIteration + 1;
 						_increment = 1;
 					};
 				};			
-				_x set [8,_increment];
+				_x set [9,_increment];
 			};
 			// remove task on final frame
 			case 2:{
-				if (_iteration >= _maxIteration) then {
+				if (_iteration > _maxIteration) then {
 					_remove pushBack _target;
 				};
 			};
 		};
 
 		_x set [3,_iteration];
-		_x set [5,diag_tickTime + _delay];
+		_x set [6,diag_tickTime + _interval];
 	};
 } foreach VAR_ANIMATE_LIST_LOCAL;
 
