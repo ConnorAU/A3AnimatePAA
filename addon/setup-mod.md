@@ -7,7 +7,7 @@ You can download the mod from the following locations:
 - [Github Releases](https://github.com/ConnorAU/A3AnimatePAA/releases)
 
 ## Adding new animations
-Use own mod to add new animation configurations, simply open your `config.cpp` and add the following:
+Use your own mod to add new animation configurations, simply open your `config.cpp` and add the following:
 ```cpp
 class CfgAnimatePAA {
     // Example: https://github.com/ConnorAU/A3AnimatePAA/blob/master/demo/config.cpp#L26-L44
